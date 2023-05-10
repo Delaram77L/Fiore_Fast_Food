@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "allFont";
+  src: url(../../FONTS/fonts/font-farsi-web/font-farsi-web/font/BMitra.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "allFont";
+}
+
+body {
+  background-color: rgb(157, 0, 0);
+}
+
+/*# sourceMappingURL=-base.css.map */
