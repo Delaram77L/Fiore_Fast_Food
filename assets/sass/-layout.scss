@@ -1,0 +1,24 @@
+
+                                         // start header 
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)),url(../../images/bg.jpeg) center no-repeat;
+    background-size: cover;
+    font-family: morvarid;
+
+    .brand{
+        @include centering(20%);
+        display: flex;
+        align-items: center
+    }
+
+    .header-banner{
+        text-align: center;
+        @include centering(50%);
+        font-family: "b-nazanin";
+    }
+}
+
+                                         // end header

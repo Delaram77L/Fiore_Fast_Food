@@ -1,21 +1,41 @@
+
+// variables
+
 @font-face {
-    font-family: "allFont";
-    src: url(../../FONTS/fonts/font-farsi-web/font-farsi-web/font/BMitra.woff);
+    font-family: "morvarid";
+    src: url(../../FONTS/fonts/font-farsi-web/font-farsi-web/font/BMorvarid.woff);}
+@font-face {
+    font-family: "b-nazanin";
+    src: url(../../FONTS/fonts/font-farsi-web/font-farsi-web/font/BNazanin.woff);}
+@font-face {
+    font-family: "font-dansingScript";
+    src: url(../../FONTS/FontsFree-Net-DancingScript-Regular.ttf);}
+@font-face {
+    font-family: "bold";
+    src: url(../../FONTS/fonts/font-farsi-web/font-farsi-web/font/Shabnam.woff);}
+@font-face {
+    font-family: "nastaliq";
+    src: url(../../FONTS/IranNastaliq.ttf);
 }
 
+$color-bg :rgb(148, 0, 0);
+$color-orange :#f5cf56;
+$color-white :#ffffff;
 
-$color-bg :rgb(157, 0, 0);
 
 
+@mixin flexBase{
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+@mixin centering($topvalue){
+    position: absolute;
+    top:$topvalue;
+    right: 50%;
+    transform: translate(50%,-50%);}
 
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "allFont"
-}
+*{margin: 0;
+padding: 0;}
     
-    
-body{
-    background-color: $color-bg;
-}
