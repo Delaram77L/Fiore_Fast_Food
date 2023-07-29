@@ -23,6 +23,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #1f1f1f;
+}
+
 .logo {
   display: flex;
   justify-content: center;
@@ -38,16 +42,17 @@
 
 .name {
   color: #f5cf56;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: "morvarid";
 }
 
 .sub-name {
-  color: #ffffff;
+  color: #d4d4d4;
   font-size: 25px;
 }
 
 .heading {
-  font-family: "nastaliq";
+  font-family: "font-dansingScript";
   font-size: 150px;
   color: #f5cf56;
 }
@@ -55,25 +60,45 @@
 .sub-heading {
   font-size: 30px;
   margin-bottom: 20px;
+  color: #d4d4d4;
 }
 
 .header-btn {
-  font-family: "bold";
+  font-family: "b-nazanin";
   font-weight: bold;
+  color: #d4d4d4;
   box-shadow: 0 2px 3px 2px rgba(245, 207, 86, 0.6);
   transition: all 0.4s;
+  cursor: pointer;
 }
 .header-btn:hover {
   background-color: rgba(245, 207, 86, 0.6);
+}
+
+.about-btn {
+  font-family: "b-nazanin";
+  font-weight: bold;
+  color: #d4d4d4;
+  box-shadow: 0 2px 3px 2px rgba(245, 207, 86, 0.6);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.about-btn:hover {
+  background-color: rgba(245, 207, 86, 0.6);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
 }
 
 .header {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/bg.jpeg) center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/italian-spaghetti-with-tomato-sauce-pan.jpg) center no-repeat;
   background-size: cover;
-  font-family: morvarid;
+  font-family: "morvarid";
 }
 .header .brand {
   position: absolute;
@@ -90,6 +115,46 @@
   right: 50%;
   transform: translate(50%, -50%);
   font-family: "b-nazanin";
+}
+
+.about-us {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-us-right {
+  width: 20%;
+}
+.about-us-right img {
+  width: 250%;
+  opacity: 0.7;
+}
+.about-us-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  flex-direction: column;
+  margin-right: 190px;
+}
+.about-us-center .titr {
+  color: #d4d4d4;
+  font-size: 35px;
+  font-family: "b-nazanin";
+}
+.about-us-center .paragraph {
+  color: #d4d4d4;
+  font-size: 25px;
+  font-family: "b-nazanin";
+}
+.about-us-left {
+  width: 20%;
+}
+.about-us-left img {
+  margin-right: 235px;
+  width: 250%;
+  opacity: 0.7;
 }
 
 /*# sourceMappingURL=main.css.map */
