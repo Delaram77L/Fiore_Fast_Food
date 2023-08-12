@@ -15,139 +15,239 @@
 
     <title>فست فود فیور</title>
 
+    <!-- script.js  search ?????????????????????????? -->
+    <style>
+        .highlight {
+            background-color: #f5cf56;
+        }
+    </style>
+
+    <script>
+        let originalText = "";
+
+        function pageLoad() {
+            originalText = document.getElementById('Text').innerHTML;
+        }
+
+        function findText() {
+            let phrase = document.getElementById('find').value;
+            let txt = originalText;
+
+            document.getElementById('Text').innerHTML = txt.split(phrase).join
+                ('<span class="highlight">' + phrase + '</span>')
+        }
+    </script>
 </head>
 
-<body>
+<body onload="pageLoad()">
 
-    <!-- start header  -->
-    <header class="header">
-        <div class="brand">
-            <a href="#" class="logo mx-3">
-                <i class="fa fa-utensils fa-beat-fade fa-sm" style="color: #f5cf56;"></i>
-            </a>
-            <div>
-                <h1 class="name">فست فود ایتالیایی فیور</h1>
-                <p class="sub-name">مزه ی یک کشور</p>
+    <!-- start navbar -->
+    <nav class="navbar navbar-dark fixed-top">
+        <div class="container-fluid ">
+            <button class="navbar-toggler me-3 bg-warning mt-3 fs-2" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><b>رستوران فیور</b></h5>
+                    <button class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item mb-3">
+                            <a class="nav-link active text-dark nav-home" aria-current="page" href="#"><b>خانه</b></a>
+                        </li>
+                        <li class="nav-item mb-3">
+                            <a class="nav-link text-dark" href="#">منو کامل فیور</a>
+                        </li>
+                        <li class="nav-item mb-3 dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                رزرو میز
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark text-center">
+                                <li><a class="dropdown-item" href="#">4 نفره</a></li>
+                                <li><a class="dropdown-item" href="#">8 نفره</a></li>
+                                <li><a class="dropdown-item" href="#">بیشتر از 10 نفر</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" id="find" type="search" placeholder=". . ."
+                            aria-label="Search">
+                        <button onclick="findText()"
+                            class="btn px-4 py-1 fs-5 border-2 border-warning rounded-pill search-btn"
+                            type="submit">جستجو</button>
+                    </form>
+                </div>
+                <span id="date" class="d-flex align-items-end justify-content-center fs-3 mb-4 bg-warning"></span>
             </div>
         </div>
-        <div class="header-banner">
-            <h1 class="heading">welcome</h1>
-            <h3 class="sub-heading"> { fiore di fast food }</h3>
-            <button class="btn px-4 py-1 fs-4 border-2 border-warning rounded-pill header-btn">رزرو
-                میز</button>
-        </div>
-    </header>
-    <!-- end header  -->
+    </nav>
+    <!-- end navbar -->
+
+    <div id="Text">
+
+        <!-- start header  -->
+        <header class="header">
+            <div class="brand">
+                <a href="#" class="logo mx-3">
+                    <i class="fa fa-utensils fa-beat-fade fa-sm" style="color: #f5cf56;"></i>
+                </a>
+                <div>
+                    <h1 class="name">فست فود ایتالیایی فیور</h1>
+                    <p class="sub-name">مزه ی یک کشور</p>
+                </div>
+            </div>
+            <div class="header-banner">
+                <h1 class="heading">welcome</h1>
+                <h3 class="sub-heading"> { fiore di fast food }</h3>
+                <button class="btn px-4 py-1 fs-4 border-2 border-warning rounded-pill header-btn">رزرو
+                    میز</button>
+            </div>
+        </header>
+        <!-- end header  -->
 
 
-    <!-- start about us -->
-    <div class="container-fluid">
-        <div class="row p-3 ">
-            <div class="col-3"> <!--justify-content-center ??????????-->
-                <div class="about-us-right ">
-                    <img src="./images/burger10_03.jpg" alt="درباره ما">
+        <!-- start about us -->
+        <div class="container-fluid">
+            <div class="row p-3 ">
+                <div class="col-3">
+                    <div class="about-us-right ">
+                        <img src="./images/burger10_03.jpg" alt="درباره ما">
+                    </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="about-us-center text-center p-1">
-                    <h1 class="titr mb-3">درباره ی فست فود ایتالیایی فیور</h1>
-                    <p class="paragraph">مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که
-                        بتوانیم
-                        خدمت‌گزار مردم شریف مان باشیم با فست فود های فرهنگ کشور ایتالیا. ما در فست فود فیور همواره
-                        تلاش میکنیم که در محیطی مدرن
-                        در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.
-                    </p>
-                    <button class="btn px-4 py-1 fs-4 border-2 border-warning rounded-pill about-btn">اطلاعات
-                        بیشتر</button>
+                <div class="col-6">
+                    <div class="about-us-center text-center p-1">
+                        <h1 class="titr mb-3">درباره ی فست فود ایتالیایی فیور</h1>
+                        <p class="paragraph">مهمان‌نوازی یکی از مهم‌ترین مشخصه‌های ایرانیان است و باعث افتخار ماست که
+                            بتوانیم
+                            خدمت‌گزار مردم شریف مان باشیم با فست فود های فرهنگ کشور ایتالیا. ما در فست فود فیور همواره
+                            تلاش میکنیم که در محیطی مدرن
+                            در کنار طبیعتی دلنواز، غذایی سالم و درخور شان شما عزیزان ارائه دهیم.
+                        </p>
+                        <button class="btn px-4 py-1 fs-4 border-2 border-warning rounded-pill about-btn">اطلاعات
+                            بیشتر</button>
+                    </div>
                 </div>
-            </div>
-            <div class="col-3">
-                <div class="about-us-left">
-                    <img src="./images/burger10_033.jpg" alt="درباره ما">
+                <div class="col-3">
+                    <div class="about-us-left">
+                        <img src="./images/burger10_033.jpg" alt="درباره ما">
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- end about us -->
+
+
+        <!--start gallery-->
+        <div class="container-fluid">
+            <div class="row justify-content-around">
+                <div class="col-3">
+                    <div class="card ">
+                        <img src="./images/berger menue.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">منو برگر </h5>
+                            <p class="card-text">بهترین برگرهای فیور</p>
+                            <button
+                                class="card-btn btn px-4 py-1 fs-4 border-2 border-warning rounded-pill">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card ">
+                        <img src="./images/sokhari menue.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">منو سوخاری</h5>
+                            <p class="card-text">بهترین سوخاری های فیور</p>
+                            <button
+                                class="card-btn btn px-4 py-1 fs-4 border-2 border-warning rounded-pill">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card ">
+                        <img src="./images/sandwich menue.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">منو ساندویچ</h5>
+                            <p class="card-text">بهترین ساندویچ های فیور</p>
+                            <button
+                                class="card-btn btn px-4 py-1 fs-4 border-2 border-warning rounded-pill">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-around mt-3">
+                <div class="col-3">
+                    <div class="card ">
+                        <img src="./images/spagety menue.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">منو اسپاگتی</h5>
+                            <p class="card-text">بهترین اسپاگتی های فیور</p>
+                            <button
+                                class="card-btn btn px-4 py-1 fs-4 border-2 border-warning rounded-pill">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card ">
+                        <img src="./images/sokhari menue.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">منو سوخاری</h5>
+                            <p class="card-text">بهترین سوخاری های فیور</p>
+                            <button
+                                class="card-btn btn px-4 py-1 fs-4 border-2 border-warning rounded-pill">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="card ">
+                        <img src="./images/sandwich menue.jpg" class="card-img" alt="...">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">منو ساندویچ</h5>
+                            <p class="card-text">بهترین ساندویچ های فیور</p>
+                            <button
+                                class="card-btn btn px-4 py-1 fs-4 border-2 border-warning rounded-pill">سفارش</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end gallery-->
+
+
+        <!-- start footer -->
+        <footer class="footer container-fluid bg-dark p-5 mt-5">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="footer-brand d-flex col-6">
+                    <a href="#" class="logo me-5">
+                        <i class="fa fa-utensils fa-beat-fade fa-sm" style="color: #f5cf56;"></i>
+                    </a>
+                    <div class="me-4">
+                        <h1 class="name">فست فود ایتالیایی فیور</h1>
+                        <p class="sub-name">مزه ی یک کشور</p>
+                    </div>
+                </div>
+                <div class="social-media col-6">
+                    <ul class="list-unstyled">
+                        <li class="telephone mb-2">
+                            <a class="nav-link before-x" href="#">ارتباط با فیور</a>
+                        </li>
+                        <li class="telegram mb-2">
+                            <a class="nav-link before-z" href="#">صفحه تلگرام</a>
+                        </li>
+                        <li class="instagram mb-3">
+                            <a class="nav-link before-w" href="#">صفحه اینستاگرام</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- ens footer -->
     </div>
-    <!-- end about us -->
-
-    
-    <!--start hhhh-->
-    <div class="container-fluid">
-        <div class="row justify-content-around">
-            <div class="col-3">
-                <div class="card text-bg-dark">
-                    <img src="./images/berger menue.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card text-bg-dark">
-                    <img src="./images/sokhari menue.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card text-bg-dark">
-                    <img src="./images/sandwich menue.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-around mt-3">
-            <div class="col-3">
-                <div class="card text-bg-dark">
-                    <img src="./images/spagety menue.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card text-bg-dark">
-                    <img src="./images/sokhari menue.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-3">
-                <div class="card text-bg-dark">
-                    <img src="./images/sandwich menue.jpg" class="card-img" alt="...">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small>Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end hhhh-->
-
-
-
 </body>
 
 </html>

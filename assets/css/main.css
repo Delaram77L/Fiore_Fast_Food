@@ -35,13 +35,13 @@ body {
   font-size: 90px;
   width: 120px;
   height: 120px;
-  border: 3px solid #f5cf56;
+  border: 3px solid rgb(245, 207, 86);
   border-radius: 50%;
   box-shadow: 0 2px 3px 2px rgba(245, 207, 86, 0.6);
 }
 
 .name {
-  color: #f5cf56;
+  color: rgb(245, 207, 86);
   font-size: 35px;
   font-family: "morvarid";
 }
@@ -54,7 +54,7 @@ body {
 .heading {
   font-family: "font-dansingScript";
   font-size: 150px;
-  color: #f5cf56;
+  color: rgb(245, 207, 86);
 }
 
 .sub-heading {
@@ -90,6 +90,134 @@ body {
 .card {
   width: 100%;
   height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card .card-img {
+  opacity: 0.7;
+}
+.card .card-img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  background-color: rgba(148, 0, 0, 0.5);
+  color: #d4d4d4;
+  z-index: 10;
+  top: -160%;
+  left: 0;
+}
+.card .card-img-overlay:hover {
+  top: 0;
+  transition: top 0.4s;
+}
+.card .card-title {
+  font-family: "morvarid";
+  font-size: 50px;
+}
+.card .card-text {
+  font-family: "b-nazanin";
+  font-size: 30px;
+}
+.card .card-btn {
+  font-family: "b-nazanin";
+  font-weight: bold;
+  color: #d4d4d4;
+  box-shadow: 0 2px 3px 2px rgba(245, 207, 86, 0.6);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.card .card-btn:hover {
+  background-color: rgba(245, 207, 86, 0.6);
+}
+
+.before-x {
+  text-decoration: none;
+  color: #d4d4d4;
+  font-family: "b-nazanin";
+  font-size: 25px;
+}
+.before-x:hover {
+  color: rgb(245, 207, 86);
+  transition: color 0.4s;
+}
+.before-x::before {
+  content: url(../../images/telephone1.png);
+  margin-left: 30px;
+}
+
+.before-z {
+  text-decoration: none;
+  color: #d4d4d4;
+  font-family: "b-nazanin";
+  font-size: 25px;
+}
+.before-z:hover {
+  color: rgb(245, 207, 86);
+  transition: color 0.4s;
+}
+.before-z::before {
+  content: url(../../images/telegram1.png);
+  margin-left: 30px;
+}
+
+.before-w {
+  text-decoration: none;
+  color: #d4d4d4;
+  font-family: "b-nazanin";
+  font-size: 25px;
+}
+.before-w:hover {
+  color: rgb(245, 207, 86);
+  transition: color 0.4s;
+}
+.before-w::before {
+  content: url(../../images/instagram1.png);
+  margin-left: 30px;
+}
+
+.navbar .offcanvas-title {
+  font-family: "morvarid";
+  font-size: 30px;
+  color: rgb(148, 0, 0);
+}
+.navbar .navbar-nav {
+  font-family: "b-nazanin";
+  font-size: 25px;
+}
+.navbar .dropdown-menu {
+  background-color: rgb(245, 207, 86);
+}
+.navbar .dropdown-menu .dropdown-item {
+  font-family: "b-nazanin";
+  font-size: 20px;
+  padding: 5px;
+  color: #1f1f1f;
+}
+.navbar .form-control {
+  border: 2px solid rgb(148, 0, 0);
+  border-radius: 20px;
+  box-shadow: 0 1px 2px 1px rgba(148, 0, 0, 0.6);
+  margin-left: 7px;
+}
+.navbar .form-control:hover {
+  background-color: rgba(148, 0, 0, 0.3);
+}
+.navbar .search-btn {
+  font-family: "b-nazanin";
+  font-weight: bold;
+  color: #d4d4d4;
+  box-shadow: 0 2px 3px 2px rgba(245, 207, 86, 0.6);
+  transition: all 0.4s;
+  cursor: pointer;
+  color: #1f1f1f;
+}
+.navbar .search-btn:hover {
+  background-color: rgba(245, 207, 86, 0.6);
+}
+.navbar #date {
+  font-family: "morvarid";
 }
 
 .header {

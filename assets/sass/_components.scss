@@ -31,16 +31,108 @@
 .header-btn{
     @include btn;
     }
-    
         //end header
+
+
         //start about us
 .about-btn{
     @include btn;
     }
         //end about us
-        //start .....
+
+        
+        //start gallery
 .card{
     width: 100%;
     height: 100%;
+    position: relative;
+    overflow: hidden;
+
+    & .card-img{
+        opacity: .7;
+    }
+
+    & .card-img-overlay{
+        @include flexBase;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgb(148, 0, 0,.5);
+        color: $color-white;
+        z-index: 10;
+        top: -160%;
+        left: 0;
+        
+        &:hover{
+            top: 0;
+            transition: top .4s;
+        }
+    }
+
+    & .card-title{
+        font-family: "morvarid";
+        font-size: 50px;
+    }
+
+    & .card-text{
+        font-family: "b-nazanin";
+        font-size: 30px;
+    }
+
+    & .card-btn{
+        @include btn;
+    }
 }
-        //end .....
+        //end gallery
+
+
+        //start footer
+.before-x{
+    text-decoration: none;
+    color: $color-white;
+    font-family: "b-nazanin";
+    font-size: 25px;
+
+    &:hover{
+        color: rgb(245, 207, 86);
+        transition: color .4s;
+    }
+
+    &::before{content: url(../../images/telephone1.png);
+        margin-left: 30px; 
+    }}
+    
+
+
+    
+.before-z{
+    text-decoration: none;
+    color: $color-white;
+    font-family: "b-nazanin";
+    font-size: 25px;
+
+    &:hover{
+        color: rgb(245, 207, 86);
+        transition: color .4s;
+    }
+
+    &::before{content: url(../../images/telegram1.png);
+        margin-left: 30px;
+    }}
+    
+
+
+.before-w{
+    text-decoration: none;
+    color: $color-white;
+    font-family: "b-nazanin";
+    font-size: 25px;
+
+    &:hover{
+        color: rgb(245, 207, 86);
+        transition: color .4s;
+    }
+
+    &::before{content: url(../../images/instagram1.png);
+        margin-left: 30px;
+    }}
+        //end footer
