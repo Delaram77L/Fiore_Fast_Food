@@ -177,6 +177,10 @@ body {
   margin-left: 30px;
 }
 
+.highlight {
+  background-color: aqua;
+}
+
 .navbar .offcanvas-title {
   font-family: "morvarid";
   font-size: 30px;

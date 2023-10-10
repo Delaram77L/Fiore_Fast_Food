@@ -1,19 +1,18 @@
-// import './css';
 
-// let originalText = "";
+let originalText = "";
 
-// function pageLoad() {
-//     originalText = document.getElementById('Text').innerHTML;
-// }
+function pageLoad() {
+    originalText = document.getElementById('Text').innerHTML;
+}
 
-// function findText() {
-//     let phrase = document.getElementById('find').value;
-//     let txt = originalText;
+function findText() {
+    let phrase = document.getElementById('find').value;
+    let txt = originalText;
 
-//     document.getElementById('Text').innerHTML = txt.split(phrase).join
-//     ('<span class="highlight">' + phrase + '</span>')
-//     highlight.style.backgroundColor = 'yellow';
-// }
+    document.getElementById('Text').innerHTML = txt.split(phrase).join
+        ('<span class="highlight">' + phrase + '</span>')
+}
+     
 
 // ?????????????????????????????????????????????
 
